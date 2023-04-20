@@ -2,6 +2,7 @@ import random
 
 user_wins=0
 compurt_wins=0
+tie=0
 
 options = ["rock","paper","scissors"]
 
@@ -31,6 +32,10 @@ while True:
         print("Your Won!")
         user_wins += 1
 
+    elif user_input == "scissors" and computer_pick == "scissors" or user_input == "paper" and computer_pick == "paper" or user_input == "rock" and computer_pick == "rock":
+        print("Match Tie!")
+        tie += 1
+
     else:
         print("You Lost!")
         compurt_wins += 1
@@ -38,5 +43,6 @@ while True:
 
         
 print("You won", user_wins, "times.")
-print("Computer wins", compurt_wins, "times.")
+print("Computer won", compurt_wins, "times.")
+print("Match Ties", tie, "times.")
 print("See You Again!\n")
